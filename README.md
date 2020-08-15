@@ -11,10 +11,11 @@ this list of favorites can then be used as the source of quotes to pull one at r
    * GtkD (https://gtkd.org/)
    * make (https://www.gnu.org/software/make/)
 
-  ###Linux
+  ### Linux
    * run make
     `make`
- ###Windows,MACOS
+    
+ ### Windows,MACOS
     1. install linux
     2. see above
 
