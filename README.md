@@ -13,6 +13,7 @@ this list of favorites can then be used as the source of quotes to pull one at r
 
   ### Linux
   * run the included makefile
+  
   `make`
     
  ### Windows,MACOS
