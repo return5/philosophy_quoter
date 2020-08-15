@@ -16,8 +16,8 @@ this list of favorites can then be used as the source of quotes to pull one at r
     `make`
     
  ### Windows,MACOS
-    1. install linux
-    2. see above
+   1. install linux
+   2. see above
 
 ## Adding/Removing/Modifying quotes
    The default source for quotes is in 'quotes.txt' You may add,remove, or alter any quote you want, just make sure you follow the formatting of the already existing quotes in that file.
