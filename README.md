@@ -12,8 +12,8 @@ this list of favorites can then be used as the source of quotes to pull one at r
    * make (https://www.gnu.org/software/make/)
 
   ### Linux
-   * run make
-   *`make`
+  * run the included makefile
+  `make`
     
  ### Windows,MACOS
    1. install linux
