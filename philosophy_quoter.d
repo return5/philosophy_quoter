@@ -75,9 +75,9 @@ string []getQuoteArr(in string file) {
 
 //save a favorite quote to file. 
 void saveToFavorites(in string quote,in string file,in string[] fav_arr) {
-    foreach(i;0 .. fav_arr.length) {
+    foreach(q; fav_arr) {
         //if quote is already in favorites then dont save it to favorites.
-        if(quote == fav_arr[i]) {
+        if(quote == q) {
             return;
         }
     }
