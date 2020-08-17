@@ -74,7 +74,13 @@ string []getQuoteArr(in string file) {
 }
 
 //save a favorite quote to file. 
-void saveToFavorites(in string quote,in string file) {
+void saveToFavorites(in string quote,in string file,in string[] fav_arr) {
+    foreach(i;0 .. fav_arr.length) {
+        //if quote is already in favorites then dont save it to favorites.
+        if(quote == fav_arr[i]) {
+            return;
+        }
+    }
     append(file,quote~"\n\n");
 }
 
@@ -89,7 +95,7 @@ Grid makeButtonGrid(out string quote,in string file_name,in string favorites,str
     Button button2      = new Button("get favorite quote");        //buton with will get a quote form favorites file
     Button button3      = new Button("get random quote");          //button which will get quote from quotes file
     Grid grid           = new Grid();                              //grid to hold the three buttons
-	button.addOnClicked(delegate void(Button b) {saveToFavorites(quote,favorites); });   //on clicking button save quote to favorite
+	button.addOnClicked(delegate void(Button b) {saveToFavorites(quote,favorites,fav_arr); });   //on clicking button save quote to favorite
 	button2.addOnClicked(delegate void(Button b) {getQuote(fav_arr,quote,txt); });       //on clicking button2 get a quote from favorites
 	button3.addOnClicked(delegate void(Button b) {getQuote(quote_arr,quote,txt); });     //on clicking button3 get a quote from quotes file
     grid.setColumnSpacing(20);
