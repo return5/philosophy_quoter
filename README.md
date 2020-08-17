@@ -1,4 +1,4 @@
-# Philosopjy Quoter
+# Philosophy Quoter
 This program simply displays a random quote pulled from a list of saved quotes. 
 The user can also choose to save a quote to a list of favorites.
 this list of favorites can then be used as the source of quotes to pull one at random from.
