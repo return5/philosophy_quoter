@@ -43,9 +43,7 @@ import gtk.ScrolledWindow;
 // ----------------------- global vars -------------------------------------
 Random rnd;            //random number generator.
 
-
 // ----------------------- functions ----------------------------------------
-
 
 void displayQuote(in string quote,TextBuffer txt) {
     txt.setText(quote);
@@ -53,13 +51,18 @@ void displayQuote(in string quote,TextBuffer txt) {
 
 //get a quote at random from the array of quotes. 
 void getQuote(string [] quote_arr,out string quote,TextBuffer txt){
-    quote = strip(quote_arr.choice(rnd));   //get a random quote from quote_arr
-    if(quote.empty == false) {  //if quote is not an empty string then display it.
-        displayQuote(quote,txt);
-    }
-    else {
-        getQuote(quote_arr,quote,txt);
-    }
+	if(quote_arr == null) {
+		displayQuote("Sorry, file does not exist.",txt);
+	}
+	else {
+		quote = strip(quote_arr.choice(rnd));   //get a random quote from quote_arr
+		if(quote.empty == false) {  //if quote is not an empty string then display it.
+			displayQuote(quote,txt);
+		}
+		else {
+			getQuote(quote_arr,quote,txt);
+		}
+	}
 }
 
 //get an array of strings, each index is a quote from file.
